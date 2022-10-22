@@ -14,13 +14,13 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          npm install
-          npm run build
-          
+          npm install -g pnpm
+          pnpm build
+
       - name: Reset package-lock.json
         run: |
           git checkout package-lock.json
-        
+
       - name: File Sanity Check
         run: ls build
 
@@ -30,5 +30,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: "build/"
+          local-dir: "build/client/"
           server-dir: "www/"
