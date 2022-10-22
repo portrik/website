@@ -1,0 +1,29 @@
+on:
+  - push
+  - pull_request
+
+jobs:
+  install-and-validate:
+    name: Install and Validate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: true
+
+      - name: Validate
+        run: |
+          pnpm build
+          pnpm lint
