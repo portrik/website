@@ -5,8 +5,17 @@ import { Base } from '@components';
 
 import { type PageContextServer } from './types';
 
+/**
+ * Data passed to the client from the server.
+ */
 export const passToClient = ['pageProps', 'urlPathname'];
 
+/**
+ * Server-side renderer used by the vite-plugin-ssr.
+ * Not 100% sure how it works since I am not using it.
+ *
+ * Updated to match my preferred code styling.
+ */
 export async function render(pageContext: PageContextServer) {
 	const { Page, pageProps } = pageContext;
 	const { documentProps } = pageContext.exports;
@@ -31,6 +40,7 @@ export async function render(pageContext: PageContextServer) {
 
         <title>${title}</title>
       </head>
+
       <body>
         <div id="page-view">${dangerouslySkipEscape(pageHtml)}</div>
       </body>

@@ -1,10 +1,11 @@
 .title {
 	/** Font sizing */
 	font-weight: 900;
-	font-size: 5rem;
+	font-size: 3rem;
+	text-transform: uppercase;
 
 	/** Keeps the spacing between lines much smaller than default. */
-	line-height: 5rem;
+	line-height: 3rem;
 
 	/** Sets the with to the shortest word in the title. Breaks line after each word. */
 	white-space: pre-line;

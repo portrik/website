@@ -1,12 +1,12 @@
-name: Validate
+name: Build & Test
 
 on:
   - push
   - pull_request
 
 jobs:
-  install-and-validate:
-    name: Install and Validate
+  build-and-test:
+    name: Build & Test
     runs-on: ubuntu-latest
 
     steps:
@@ -25,7 +25,7 @@ jobs:
           version: 7.14.0
           run_install: true
 
-      - name: Validate
+      - name: Build & Test
         run: |
           pnpm build
           pnpm lint

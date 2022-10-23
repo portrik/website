@@ -5,6 +5,11 @@ interface ErrorPageProps {
 }
 export type { ErrorPageProps };
 
+/**
+ * Default error page provided by the vite-plugin-ssr.
+ *
+ * Updated to match my preferred code styling.
+ */
 export const Page: FC<ErrorPageProps> = ({ is404 }) => {
 	return (
 		<>
