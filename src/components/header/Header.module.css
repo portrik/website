@@ -1,0 +1,12 @@
+.header {
+	/** Get fixed height for the Header. */
+	height: 9rem;
+	width: 100%;
+	padding: 2vh;
+
+	/** Nice flex display to align the contents of the header. */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}

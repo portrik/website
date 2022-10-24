@@ -1,15 +1,21 @@
 body {
 	margin: 0;
+
 	font-family: 'Jost', sans-serif;
 	font-size: 18px;
+
+	background-color: #f6f6f6;
 }
 
 * {
 	box-sizing: border-box;
 }
 
-a {
-	text-decoration: none;
+@media print {
+	body {
+		background-color: white;
+		color: black;
+	}
 }
 
 .contentWrapper {
@@ -29,17 +35,23 @@ a {
 	align-items: flex-start;
 }
 
-/** Styling for vertical aspect ratios */
-@media (max-aspect-ratio: 1/1) {
+/** Styling for vertical aspect ratios - applies only to digital. */
+@media screen and (max-aspect-ratio: 1/1) {
 	.content {
 		width: 100vw;
 		padding: 2vw;
 	}
 }
 
-/** Styling for horizontal aspect ratios */
-@media (min-aspect-ratio: 1/1) {
+/** Styling for horizontal aspect ratios - applies only to digital */
+@media screen and (min-aspect-ratio: 1/1) {
 	.content {
 		width: 80vw;
+	}
+}
+
+@media print {
+	.content {
+		width: 100vw;
 	}
 }

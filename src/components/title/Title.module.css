@@ -6,6 +6,7 @@
 
 	/** Keeps the spacing between lines much smaller than default. */
 	line-height: 3rem;
+	margin: 0;
 
 	/** Sets the with to the shortest word in the title. Breaks line after each word. */
 	white-space: pre-line;
