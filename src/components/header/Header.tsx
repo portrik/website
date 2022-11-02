@@ -1,5 +1,8 @@
 import { type FC } from 'react';
-import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
+// ! Must use the import from index here!
+// The problem is with vite-plugin-ssr which cannot handle import from "react-icons/bs".
+// It throws an error that it cannot import directory for some reason.
+import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs/index';
 
 import { ProfilePicture, Social, Title } from '@components';
 
