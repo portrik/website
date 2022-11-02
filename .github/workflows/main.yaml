@@ -1,26 +1,39 @@
 name: Deploy to Production
+
 on:
   push:
     branches: prod
+
 jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
           persist-credentials: false
 
-      - name: Install and Build 🔧
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - uses: pnpm/action-setup@v2.2.4
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7.14.0
+          run_install: true
+
+      - name: Build
         run: |
-          npm install
-          npm run build
-          
+          pnpm build
+
       - name: Reset package-lock.json
         run: |
           git checkout package-lock.json
-        
+
       - name: File Sanity Check
         run: ls build
 
@@ -30,5 +43,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: "build/"
+          local-dir: "build/client/"
           server-dir: "www/"
