@@ -1,0 +1,25 @@
+.social {
+	/* Remove the default link styling. */
+	text-decoration: none;
+	color: inherit;
+	font-size: 1rem;
+
+	/* Add nicely aligned display. */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: start;
+	gap: 1vw;
+}
+
+/* Sets the content of the link text to the digital value. */
+.social p::after {
+	content: attr(data-digital-value);
+}
+
+/* Sets the content of the link text to the print value. */
+@media print {
+	.social p::after {
+		content: attr(data-print-value);
+	}
+}

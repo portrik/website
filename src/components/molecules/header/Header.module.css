@@ -1,0 +1,27 @@
+.header {
+	/* Get fixed height for the Header. */
+	height: min-content;
+	width: 100%;
+	padding: 2vh;
+
+	/* Nice flex display to align the contents of the header. */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	border-bottom: 1px black solid;
+}
+
+.socials {
+	/* Sizes the socials bounding box to occupy the empty space in the header. */
+	flex-grow: 2;
+
+	/* Sets up the grid with at least two columns. */
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+	justify-items: center;
+
+	/* Gives the socials more padding. */
+	padding: 0 2vw 0 2vw;
+}

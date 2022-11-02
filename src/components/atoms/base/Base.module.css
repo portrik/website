@@ -1,3 +1,4 @@
+/* Default styling common for all elements. */
 body {
 	margin: 0;
 
@@ -8,14 +9,8 @@ body {
 }
 
 * {
+	/* Standardize the box-sizing for all elements. */
 	box-sizing: border-box;
-}
-
-@media print {
-	body {
-		background-color: white;
-		color: black;
-	}
 }
 
 .contentWrapper {
@@ -35,7 +30,7 @@ body {
 	align-items: flex-start;
 }
 
-/** Styling for vertical aspect ratios - applies only to digital. */
+/* Styling for vertical aspect ratios - applies only to digital. */
 @media screen and (max-aspect-ratio: 1/1) {
 	.content {
 		width: 100vw;
@@ -43,14 +38,22 @@ body {
 	}
 }
 
-/** Styling for horizontal aspect ratios - applies only to digital */
+/* Styling for horizontal aspect ratios - applies only to digital */
 @media screen and (min-aspect-ratio: 1/1) {
 	.content {
 		width: 80vw;
 	}
 }
 
+/* Printer-friendly stylings for the print mode. */
 @media print {
+	body {
+		background-color: white;
+		color: black;
+		margin: 0;
+	}
+
+	/* Assuming the print will be on a vertical sheet of A4 paper. */
 	.content {
 		width: 100vw;
 	}
