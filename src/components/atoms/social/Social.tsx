@@ -29,18 +29,11 @@ export type { SocialProps };
  * Also works with email :)
  */
 export const Social: FC<SocialProps> = ({ link, icon, username, title }) => {
-	let printValue = link;
-	if (link.startsWith('mailto:')) {
-		// This check assumes the email link is properly formatted as mailto:email@address.example
-		// and assigns the print value as email@address.example.
-		printValue = printValue.split(':')[1];
-	}
-
 	return (
 		<a href={link} title={`My ${title}`} className={style.social}>
 			{icon}
 
-			<p data-print-value={printValue} data-digital-value={username} />
+			<p>{username}</p>
 		</a>
 	);
 };

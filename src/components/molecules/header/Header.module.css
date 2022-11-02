@@ -7,8 +7,10 @@
 	/* Nice flex display to align the contents of the header. */
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	flex-wrap: wrap;
 	align-items: center;
+	justify-content: space-around;
+	gap: 2vw;
 
 	border-bottom: 1px black solid;
 }
@@ -16,12 +18,22 @@
 .socials {
 	/* Sizes the socials bounding box to occupy the empty space in the header. */
 	flex-grow: 2;
+	min-width: max-content;
 
 	/* Sets up the grid with at least two columns. */
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+	grid-template-columns: 2fr 2fr;
 	justify-items: center;
 
 	/* Gives the socials more padding. */
 	padding: 0 2vw 0 2vw;
+}
+
+/* Bundling title and profile photo together for more consistent look. */
+.intro {
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+	justify-content: center;
+	align-items: center;
 }

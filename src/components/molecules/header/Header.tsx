@@ -16,7 +16,11 @@ import style from './Header.module.css';
 export const Header: FC = () => {
 	return (
 		<div className={style.header}>
-			<Title>Patrik Dvořáček</Title>
+			<div className={style.intro}>
+				<ProfilePicture />
+
+				<Title>Patrik Dvořáček</Title>
+			</div>
 
 			<div className={style.socials}>
 				<Social
@@ -47,8 +51,6 @@ export const Header: FC = () => {
 					icon={<BsLinkedin />}
 				/>
 			</div>
-
-			<ProfilePicture />
 		</div>
 	);
 };
