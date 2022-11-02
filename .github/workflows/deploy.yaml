@@ -30,9 +30,9 @@ jobs:
         run: |
           pnpm build
 
-      - name: Reset package-lock.json
+      - name: Reset pnpm-lock.yaml
         run: |
-          git checkout package-lock.json
+          git checkout pnpm-lock.yaml
 
       - name: File Sanity Check
         run: ls build
