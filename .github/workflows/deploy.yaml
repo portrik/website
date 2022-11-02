@@ -29,9 +29,11 @@ jobs:
       - name: Build
         run: |
           pnpm build
+
       - name: Reset pnpm-lock.yaml
         run: |
           git checkout pnpm-lock.yaml
+
       - name: File Sanity Check
         run: ls build
 
