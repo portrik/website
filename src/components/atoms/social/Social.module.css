@@ -1,0 +1,13 @@
+.social {
+	/* Remove the default link styling. */
+	text-decoration: none;
+	color: inherit;
+	font-size: 1rem;
+
+	/* Add nicely aligned display. */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: start;
+	gap: 1vw;
+}
