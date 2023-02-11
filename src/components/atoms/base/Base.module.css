@@ -1,10 +1,8 @@
 /* Default styling common for all elements. */
 body {
 	margin: 0;
-
-	font-family: 'Jost', sans-serif;
+	font-family: Jost, sans-serif;
 	font-size: 18px;
-
 	background-color: #f6f6f6;
 }
 
@@ -13,21 +11,21 @@ body {
 	box-sizing: border-box;
 }
 
-.contentWrapper {
-	width: 100vw;
-	height: 100vh;
-
+.content-wrapper {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
 	align-items: center;
+	justify-content: space-evenly;
+
+	width: 100vw;
+	height: 100vh;
 }
 
 .content {
-	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	min-height: 100vh;
 }
 
 /* Styling for vertical aspect ratios - applies only to digital. */
@@ -48,9 +46,9 @@ body {
 /* Printer-friendly stylings for the print mode. */
 @media print {
 	body {
-		background-color: white;
-		color: black;
 		margin: 0;
+		color: black;
+		background-color: white;
 	}
 
 	/* Assuming the print will be on a vertical sheet of A4 paper. */

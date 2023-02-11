@@ -41,7 +41,7 @@ interface ComponentWithChildrenProperties {
  */
 const Content: FC<ComponentWithChildrenProperties> = ({ children }) => {
 	return (
-		<div className={style.contentWrapper}>
+		<div className={style['content-wrapper']}>
 			<div className={style.content}>{children}</div>
 		</div>
 	);

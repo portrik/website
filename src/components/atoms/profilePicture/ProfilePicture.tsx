@@ -11,7 +11,7 @@ export const ProfilePicture: FC = () => {
 	return (
 		<img
 			src={Me}
-			className={style.profilePicture}
+			className={style['profile-picture']}
 			alt="Portrait of Patrik Dvořáček"
 		/>
 	);

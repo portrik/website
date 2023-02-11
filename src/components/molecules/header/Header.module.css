@@ -1,32 +1,33 @@
 .header {
-	/* Get fixed height for the Header. */
-	height: min-content;
-	width: 100%;
-	padding: 2vh;
-
 	/* Nice flex display to align the contents of the header. */
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
+	gap: 2vw;
 	align-items: center;
 	justify-content: space-around;
-	gap: 2vw;
+
+	width: 100%;
+
+	/* Get fixed height for the Header. */
+	height: min-content;
+	padding: 2vh;
 
 	border-bottom: 1px black solid;
 }
 
 .socials {
-	/* Sizes the socials bounding box to occupy the empty space in the header. */
-	flex-grow: 2;
-	min-width: max-content;
-
 	/* Sets up the grid with at least two columns. */
 	display: grid;
 	grid-template-columns: 2fr 2fr;
+
+	/* Sizes the socials bounding box to occupy the empty space in the header. */
+	flex-grow: 2;
 	justify-items: center;
 
+	min-width: max-content;
+
 	/* Gives the socials more padding. */
-	padding: 0 2vw 0 2vw;
+	padding: 0 2vw;
 }
 
 /* Bundling title and profile photo together for more consistent look. */
@@ -34,6 +35,6 @@
 	display: flex;
 	flex-direction: row;
 	gap: 2rem;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
 }
