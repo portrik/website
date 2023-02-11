@@ -17,6 +17,7 @@
         "start": "vite",
         "build": "vite build",
         "lint": "eslint src/",
+        "test": "echo Not Implemented",
         "preinstall": "npx only-allow pnpm"
     },
     "devDependencies": {
