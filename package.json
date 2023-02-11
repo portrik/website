@@ -1,6 +1,6 @@
 {
     "name": "dvoracek.dev",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "My own website written in React",
     "private": false,
     "author": {
@@ -21,7 +21,9 @@
         "start": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "lint": "eslint src/",
+        "lint:eslint": "eslint src/",
+        "lint:rome": "rome check src/",
+        "lint": "pnpm lint:eslint && pnpm lint:rome",
         "test": "echo Not Implemented",
         "preinstall": "npx only-allow pnpm"
     },
@@ -46,6 +48,7 @@
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-icons": "^4.7.1",
+        "rome": "^11.0.0",
         "typescript": "^4.9.5",
         "typescript-plugin-css-modules": "^4.1.1",
         "vite": "^4.1.1",
