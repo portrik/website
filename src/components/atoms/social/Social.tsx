@@ -2,7 +2,7 @@ import { type FC, type ReactNode } from 'react';
 
 import style from './Social.module.css';
 
-interface SocialProps {
+interface SocialProperties {
 	/**
 	 * Name of the resource the link is pointing to.
 	 * Used mainly for accessibility.
@@ -22,13 +22,18 @@ interface SocialProps {
 
 	icon: ReactNode;
 }
-export type { SocialProps };
+export type { SocialProperties as SocialProps };
 
 /**
  * Component handling the display of a link to a social network profile.
  * Also works with email :)
  */
-export const Social: FC<SocialProps> = ({ link, icon, username, title }) => {
+export const Social: FC<SocialProperties> = ({
+	link,
+	icon,
+	username,
+	title,
+}) => {
 	return (
 		<a href={link} title={`My ${title}`} className={style.social}>
 			{icon}

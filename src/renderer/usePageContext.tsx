@@ -7,7 +7,7 @@ import { type PageContext } from './types';
  */
 const Context = createContext<PageContext>({} as PageContext);
 
-interface PageContextProviderProps {
+interface PageContextProviderProperties {
 	pageContext: PageContext;
 	children: ReactNode;
 }
@@ -15,7 +15,7 @@ interface PageContextProviderProps {
 /**
  * Page context provider used by the vite-plugin-ssr.
  */
-export const PageContextProvider: FC<PageContextProviderProps> = ({
+export const PageContextProvider: FC<PageContextProviderProperties> = ({
 	pageContext,
 	children,
 }) => {
