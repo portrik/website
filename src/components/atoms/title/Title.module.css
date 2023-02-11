@@ -1,21 +1,26 @@
-.title {
-	/* Font sizing */
-	font-weight: 900;
-	font-size: 3rem;
-	text-transform: uppercase;
+@import url('../../../theme/colors.css');
 
-	/* Keeps the spacing between lines much smaller than default. */
-	line-height: 3rem;
+.title {
+	width: min-content;
 	margin: 0;
 
-	/* Sets the with to the shortest word in the title. Breaks line after each word. */
+	font-size: 3rem;
+	font-weight: 900;
+	line-height: 3rem;
+	text-transform: uppercase;
 	white-space: pre-line;
-	width: min-content;
+
+	background: var(--theme-gradient);
+	background-clip: text;
+
+	-webkit-text-fill-color: transparent;
 }
 
-/* Makes the title a little smaller for the print version. */
+/* Make the title a little smaller for the print version. */
 @media print {
 	.title {
 		font-size: 2rem;
+
+		-webkit-text-fill-color: var(--foreground);
 	}
 }

@@ -2,10 +2,22 @@ env:
   browser: true
   es2021: true
 
+plugins:
+  - react
+  - "@typescript-eslint"
+  - unicorn
+  - sonarjs
+  - jsx-a11y
+
 extends:
   - eslint:recommended
   - plugin:react/recommended
   - plugin:@typescript-eslint/recommended
+  - plugin:@typescript-eslint/recommended-requiring-type-checking
+  - plugin:@typescript-eslint/strict
+  - plugin:unicorn/recommended
+  - plugin:sonarjs/recommended
+  - plugin:jsx-a11y/recommended
 
 overrides: []
 
@@ -14,14 +26,12 @@ parser: "@typescript-eslint/parser"
 parserOptions:
   ecmaVersion: latest
   sourceType: module
+  project: ./tsconfig.json
+  tsconfigRootDir: .
 
 settings:
   react:
     version: detect
-
-plugins:
-  - react
-  - "@typescript-eslint"
 
 rules:
   indent:
@@ -54,3 +64,11 @@ rules:
         - multiple
         - single
       allowSeparatedGroups: false
+
+  # The kebab case naming does not really fit in with React naming styles.
+  unicorn/filename-case: off
+
+  # These two rules do not play well with CSS modules.
+  # Otherwise all of the styles throw en error :/
+  "@typescript-eslint/no-unsafe-assignment": off
+  "@typescript-eslint/no-unsafe-member-access": off

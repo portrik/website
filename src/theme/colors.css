@@ -1,0 +1,23 @@
+/* stylelint-disable color-function-notation */
+
+/* Have to disable the color notation here due to the modern notation not working inside linear-gradient. */
+:root {
+	/* Foreground color values. */
+	--foreground: #fff;
+	--foreground-light: #f2f2f2;
+	--foreground-print: white;
+
+	/* Background color values. */
+	--background: #101010;
+	--background-raised: #121212;
+	--background-print: black;
+
+	/* Theme color values. */
+	--theme-primary: hsla(29deg, 86%, 52%, 100%);
+	--theme-secondary: hsla(4deg, 93%, 67%, 100%);
+	--theme-gradient: linear-gradient(
+		90deg,
+		var(--theme-secondary) 0%,
+		var(--theme-primary) 100%
+	);
+}

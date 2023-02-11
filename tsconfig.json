@@ -20,11 +20,11 @@
         "noEmit": true,
         "jsx": "react-jsx",
         "sourceMap": true,
-        "incremental": true,
+        "incremental": false,
         "noFallthroughCasesInSwitch": true,
         "skipLibCheck": true,
         "resolveJsonModule": true,
-        "isolatedModules": true,
+        "isolatedModules": false,
         "paths": {
             "@assets": [
                 "./src/assets"
@@ -35,9 +35,14 @@
             "@renderer/*": [
                 "./src/renderer/*"
             ]
-        }
+        },
+        "types": [
+            "vitest/globals"
+        ]
     },
     "include": [
-        "src"
+        "src",
+        "test",
+        "vite.config.ts"
     ]
 }

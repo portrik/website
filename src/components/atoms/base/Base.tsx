@@ -6,7 +6,7 @@ import { PageContextProvider } from '@renderer/usePageContext';
 
 import style from './Base.module.css';
 
-interface BaseProps {
+interface BaseProperties {
 	/**
 	 * Content of the page.
 	 */
@@ -17,32 +17,32 @@ interface BaseProps {
 	 */
 	pageContext: PageContext;
 }
-export type { Base as PageShellProps };
+export type { Base as PageShellProperties };
 
-/**
- * Base component wrapping each page used by the vite-plugin-ssr.
- */
-export const Base: FC<BaseProps> = ({ children, pageContext }) => {
-	return (
-		<StrictMode>
-			<PageContextProvider pageContext={pageContext}>
-				<Content>{children}</Content>
-			</PageContextProvider>
-		</StrictMode>
-	);
-};
-
-interface ComponentWithChildrenProps {
+interface ComponentWithChildrenProperties {
 	children: ReactNode;
 }
 
 /**
  * Wrapper keeping the content nicely formatted vertically.
  */
-const Content: FC<ComponentWithChildrenProps> = ({ children }) => {
+const Content: FC<ComponentWithChildrenProperties> = ({ children }) => {
 	return (
-		<div className={style.contentWrapper}>
+		<div className={style['content-wrapper']}>
 			<div className={style.content}>{children}</div>
 		</div>
+	);
+};
+
+/**
+ * Base component wrapping each page used by the vite-plugin-ssr.
+ */
+export const Base: FC<BaseProperties> = ({ children, pageContext }) => {
+	return (
+		<StrictMode>
+			<PageContextProvider pageContext={pageContext}>
+				<Content>{children}</Content>
+			</PageContextProvider>
+		</StrictMode>
 	);
 };

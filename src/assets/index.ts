@@ -1,3 +1,1 @@
-import Me from './Me.jpg';
-
-export { Me };
+export { default as Me } from './Me.jpg';

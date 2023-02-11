@@ -16,14 +16,13 @@ export const passToClient = ['pageProps', 'urlPathname'];
  *
  * Updated to match my preferred code styling.
  */
-export async function render(pageContext: PageContextServer) {
-	const { Page, pageProps } = pageContext;
-	const { documentProps } = pageContext.exports;
+export function render(pageContext: PageContextServer) {
+	const { Page, pageProps, exports } = pageContext;
+	const { documentProps } = exports;
 
-	const title = (documentProps && documentProps.title) || 'Patrik Dvořáček';
+	const title = documentProps?.title ?? 'Patrik Dvořáček';
 	const desc =
-		(documentProps && documentProps.description) ||
-		'Personal website of Patrik Dvořáček.';
+		documentProps?.description ?? 'Personal website of Patrik Dvořáček.';
 
 	const pageHtml = renderToString(
 		<Base pageContext={pageContext}>

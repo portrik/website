@@ -1,11 +1,10 @@
-.profilePicture {
+.profile-picture {
 	/* Match the height of the title */
 	height: 6rem;
 
+	/* Black & White */
+	filter: grayscale(100%);
+
 	/* Subtle rounding of the corners to make it less perfect. */
 	border-radius: 2px;
-
-	/* Black & White */
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
 }
