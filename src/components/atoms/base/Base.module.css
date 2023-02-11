@@ -1,9 +1,15 @@
-/* Default styling common for all elements. */
+@import url('../../../theme/colors.css');
+@import url('../../../theme/typography.css');
+
+/* Base styling. */
 body {
 	margin: 0;
+
 	font-family: Jost, sans-serif;
-	font-size: 18px;
-	background-color: #f6f6f6;
+	font-size: var(--base-font-size);
+	color: var(--foreground);
+
+	background-color: var(--background);
 }
 
 * {
@@ -47,8 +53,8 @@ body {
 @media print {
 	body {
 		margin: 0;
-		color: black;
-		background-color: white;
+		color: var(--background-print);
+		background-color: var(--foreground-print);
 	}
 
 	/* Assuming the print will be on a vertical sheet of A4 paper. */

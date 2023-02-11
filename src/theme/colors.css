@@ -1,0 +1,8 @@
+:root {
+	--foreground: #fff;
+	--foreground-light: #f2f2f2;
+    --foreground-print: white;
+    --background-print: black;
+	--background: #101010;
+	--background-raised: #121212;
+}

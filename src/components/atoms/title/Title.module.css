@@ -15,7 +15,7 @@
 	white-space: pre-line;
 }
 
-/* Makes the title a little smaller for the print version. */
+/* Make the title a little smaller for the print version. */
 @media print {
 	.title {
 		font-size: 2rem;

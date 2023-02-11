@@ -4,6 +4,7 @@
         "ci",
         "build",
         "scripts",
-        "content"
+        "content",
+        "design"
     ]
 }
