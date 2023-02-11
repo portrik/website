@@ -70,7 +70,7 @@ export const Page: FC = () => {
 						<li>
 							My thesis was implementation of{' '}
 							<a href="https://dspace.cvut.cz/handle/10467/100944">
-								Modular Dashboard forCI
+								Modular Dashboard for CI
 							</a>
 						</li>
 

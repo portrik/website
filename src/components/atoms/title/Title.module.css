@@ -1,23 +1,26 @@
+@import url('../../../theme/colors.css');
+
 .title {
 	width: min-content;
 	margin: 0;
 
 	font-size: 3rem;
-
-	/* Font sizing */
 	font-weight: 900;
-
-	/* Keeps the spacing between lines much smaller than default. */
 	line-height: 3rem;
 	text-transform: uppercase;
-
-	/* Sets the with to the shortest word in the title. Breaks line after each word. */
 	white-space: pre-line;
+
+	background: var(--theme-gradient);
+	background-clip: text;
+
+	-webkit-text-fill-color: transparent;
 }
 
 /* Make the title a little smaller for the print version. */
 @media print {
 	.title {
 		font-size: 2rem;
+
+		-webkit-text-fill-color: var(--foreground);
 	}
 }

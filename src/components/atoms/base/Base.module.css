@@ -17,6 +17,12 @@ body {
 	box-sizing: border-box;
 }
 
+a {
+	font-weight: 800;
+	color: var(--theme-primary);
+	text-decoration: none;
+}
+
 .content-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -53,8 +59,11 @@ body {
 @media print {
 	body {
 		margin: 0;
-		color: var(--background-print);
-		background-color: var(--foreground-print);
+	}
+
+	* {
+		color: var(--background-print) !important;
+		background-color: var(--foreground-print) !important;
 	}
 
 	/* Assuming the print will be on a vertical sheet of A4 paper. */
