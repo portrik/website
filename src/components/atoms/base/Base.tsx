@@ -17,20 +17,7 @@ interface BaseProperties {
 	 */
 	pageContext: PageContext;
 }
-export type { Base as PageShellProps };
-
-/**
- * Base component wrapping each page used by the vite-plugin-ssr.
- */
-export const Base: FC<BaseProperties> = ({ children, pageContext }) => {
-	return (
-		<StrictMode>
-			<PageContextProvider pageContext={pageContext}>
-				<Content>{children}</Content>
-			</PageContextProvider>
-		</StrictMode>
-	);
-};
+export type { Base as PageShellProperties };
 
 interface ComponentWithChildrenProperties {
 	children: ReactNode;
@@ -44,5 +31,18 @@ const Content: FC<ComponentWithChildrenProperties> = ({ children }) => {
 		<div className={style['content-wrapper']}>
 			<div className={style.content}>{children}</div>
 		</div>
+	);
+};
+
+/**
+ * Base component wrapping each page used by the vite-plugin-ssr.
+ */
+export const Base: FC<BaseProperties> = ({ children, pageContext }) => {
+	return (
+		<StrictMode>
+			<PageContextProvider pageContext={pageContext}>
+				<Content>{children}</Content>
+			</PageContextProvider>
+		</StrictMode>
 	);
 };

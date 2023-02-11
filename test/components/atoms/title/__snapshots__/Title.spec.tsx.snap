@@ -1,0 +1,13 @@
+// Vitest Snapshot v1
+
+exports[`Title > Should Render Title 1`] = `
+<body>
+  <div>
+    <h1
+      class="_title_17d4f4"
+    >
+      Test Title
+    </h1>
+  </div>
+</body>
+`;
