@@ -3,6 +3,7 @@
     "conventionalCommits.scopes": [
         "ci",
         "build",
-        "scripts"
+        "scripts",
+        "content"
     ]
 }

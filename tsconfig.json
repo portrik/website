@@ -20,7 +20,7 @@
         "noEmit": true,
         "jsx": "react-jsx",
         "sourceMap": true,
-        "incremental": true,
+        "incremental": false,
         "noFallthroughCasesInSwitch": true,
         "skipLibCheck": true,
         "resolveJsonModule": true,
