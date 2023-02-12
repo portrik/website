@@ -34,6 +34,7 @@ const configuration: UserConfigExport = {
 			),
 			'@renderer': path.resolve(path.join(directoryName, 'src', 'renderer')),
 			'@theme': path.resolve(path.join(directoryName, 'src', 'theme')),
+			'@utils': path.resolve(path.join(directoryName, 'src', 'utils')),
 		},
 	},
 
