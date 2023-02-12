@@ -11,3 +11,4 @@ ignoreFiles:
   - "**/*.ts"
   - "**/*.tsx"
   - "**/*.jpg"
+  - "**/*.yaml"
