@@ -5,6 +5,7 @@
         "build",
         "scripts",
         "content",
-        "design"
+        "design",
+        "components"
     ]
 }
