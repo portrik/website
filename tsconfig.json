@@ -32,6 +32,9 @@
             "@components": [
                 "./src/components"
             ],
+            "@data": [
+                "./src/data.yaml"
+            ],
             "@renderer/*": [
                 "./src/renderer/*"
             ],

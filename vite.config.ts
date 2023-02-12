@@ -32,6 +32,7 @@ const configuration: UserConfigExport = {
 			'@components': path.resolve(
 				path.join(directoryName, 'src', 'components')
 			),
+			'@data': path.resolve(path.join(directoryName, 'src', 'data.yaml')),
 			'@renderer': path.resolve(path.join(directoryName, 'src', 'renderer')),
 			'@theme': path.resolve(path.join(directoryName, 'src', 'theme')),
 			'@utils': path.resolve(path.join(directoryName, 'src', 'utils')),

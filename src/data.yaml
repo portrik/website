@@ -1,0 +1,64 @@
+title: Patrik Dvořáček
+
+socials:
+  - title: Email
+    link: mailto:patrik@dvoracek.dev
+    username: patrik@dvoracek.dev
+    icon: BsEnvelopeFill
+
+  - title: GitHub
+    link: https://github.com/tehSIRius
+    username: tehSIRius
+    icon: BsGitHub
+
+  - title: Twitter
+    link: https://twitter.com/DvoracekPatrik
+    username: DvoracekPatrik
+    icon: BsTwitter
+
+  - title: LinkedIn
+    link: https://www.linkedin.com/in/patrikdvoracek/
+    username: patrikdvoracek
+    icon: BsLinkedIn
+
+about: Hello there! I am a software engineer with specialization in TypeScript and browser content development. Currently, I am working on internal tooling at Gen Digital. If you want to see an example of my work, head on to my GitHub profile. You can even checkout the source code and complete CI/CD pipeline of this website!
+
+positions:
+  - title: Gen Digital / Avast
+    startDate: 2018-09-18
+    endDate: null
+    responsibilities:
+      - Development of internal tooling browser-based with TypeScript, mostly with Node and React
+      - Data retrieval and analysis with Python
+      - REST API development with FastAPI
+      - CI/CD pipeline creation with GitHub, TeamCity and Jenkins
+      - Automated testing with vitest, pytest, Cypress and Selenium
+      - Manual testing of Windows, macOS and browser products
+
+  - title: CTU FEL
+    startDate: 2019-09-01
+    endDate: 2022-06-01
+    responsibilities:
+      - Bachelor's degree in Software Engineering and Technologies
+      - My thesis was implementation of Modular Dashboard for CI
+      - Mainly focused on software engineering
+      - Advanced mathematics, data structures, algorithms, project management
+      - Lots of hands-on experience with Java, Python, Dart and C++
+
+  - title: Technical High School Třebíč
+    startDate: 2014-09-01
+    endDate: 2018-06-01
+    responsibilities:
+      - Subject was Computer Systems
+      - Basics of algorithms, mainly in C++ and C#
+      - Low-level programming of micro controllers with C
+      - Web development crash-course with HTML, CSS, JavaScript and PHP
+      - Design and manufacturing of integrated circuits
+
+  - title: Cooldown.cz
+    startDate: 2015-04-01
+    endDate: null
+    responsibilities:
+      - Video game reviews, commentaries and previews
+      - Interviewing game developers
+      - In-person conference attendance
