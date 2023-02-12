@@ -6,6 +6,7 @@
         "scripts",
         "content",
         "design",
-        "components"
+        "components",
+        "utils"
     ]
 }
