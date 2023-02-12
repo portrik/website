@@ -1,5 +1,4 @@
-// Types provided by the vite-plugin-ssr
-// I have only modified their exports formatted the file.
+// Types provided by the vite-plugin-ssr.
 
 import { type PageContextBuiltIn } from 'vite-plugin-ssr';
 import { type PageContextBuiltInClient } from 'vite-plugin-ssr/client';

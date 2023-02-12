@@ -1,5 +1,4 @@
-@import url('../../../theme/colors.css');
-@import url('../../../theme/typography.css');
+@import url('@theme');
 
 /* Base styling. */
 body {

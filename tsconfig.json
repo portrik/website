@@ -32,8 +32,17 @@
             "@components": [
                 "./src/components"
             ],
+            "@data": [
+                "./src/data.yaml"
+            ],
             "@renderer/*": [
                 "./src/renderer/*"
+            ],
+            "@theme": [
+                "./src/theme"
+            ],
+            "@utils": [
+                "./src/utils"
             ]
         },
         "types": [
