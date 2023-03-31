@@ -9,7 +9,9 @@ import { type PageContextClient } from './types';
  *
  * Updated to match my preferred code styling.
  */
-export function render(pageContext: PageContextClient) {
+export function render(
+	pageContext: PageContextClient
+): ReturnType<typeof hydrateRoot> | undefined {
 	const { Page, pageProps } = pageContext;
 
 	// The falsy check here should be redundant but it keeps TS happy.

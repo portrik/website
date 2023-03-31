@@ -16,7 +16,10 @@ export const passToClient = ['pageProps', 'urlPathname'];
  *
  * Updated to match my preferred code styling.
  */
-export function render(pageContext: PageContextServer) {
+export function render(pageContext: PageContextServer): {
+	documentHtml: ReturnType<typeof escapeInject>;
+	pageContext: object;
+} {
 	const { Page, pageProps, exports } = pageContext;
 	const { documentProps } = exports;
 

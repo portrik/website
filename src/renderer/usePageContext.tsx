@@ -25,6 +25,6 @@ export const PageContextProvider: FC<PageContextProviderProperties> = ({
 /**
  * Page context hook used by the vite-plugin-ssr.
  */
-export function usePageContext() {
+export function usePageContext(): PageContext {
 	return useContext(Context);
 }
