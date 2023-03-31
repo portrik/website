@@ -35,7 +35,7 @@ export const Social: FC<SocialProperties> = ({
 	title,
 }) => {
 	return (
-		<a href={link} title={`My ${title}`} className={style.social}>
+		<a href={link} title={`My ${title}`} className={style.social} rel={title === 'Mastodon' ? 'me' : undefined}>
 			{icon}
 
 			<p>{username}</p>

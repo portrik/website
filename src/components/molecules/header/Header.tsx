@@ -6,7 +6,7 @@ import {
 	BsEnvelopeFill,
 	BsGithub,
 	BsLinkedin,
-	BsTwitter,
+	BsMastodon,
 } from 'react-icons/bs/index';
 
 import { ProfilePicture, Social, Title } from '@components';
@@ -38,10 +38,10 @@ export const Header: FC = () => {
 				/>
 
 				<Social
-					title="Twitter"
-					link="https://twitter.com/DvoracekPatrik"
-					username="@DvoracekPatrik"
-					icon={<BsTwitter />}
+					title="Mastodon"
+					link="https://mastodon.social/@portrik"
+					username="@portrik"
+					icon={<BsMastodon />}
 				/>
 
 				<Social
