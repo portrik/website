@@ -1,6 +1,10 @@
+/* stylelint-disable property-no-vendor-prefix */
+/* stylelint-disable order/properties-order */
 @import url('../../../theme/colors.css');
 
 .title {
+	display: inline-block;
+
 	width: min-content;
 	margin: 0;
 
@@ -13,6 +17,7 @@
 	background: var(--theme-gradient);
 	background-clip: text;
 
+	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
