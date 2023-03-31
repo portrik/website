@@ -3,17 +3,16 @@ name: Production Deployment
 on:
   push:
     tags:
-      - "*"
+      - '*'
 
 jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          persist-credentials: false
 
       - name: Install Node.js
         uses: actions/setup-node@v3
@@ -44,5 +43,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: "build/client/"
-          server-dir: "www/"
+          local-dir: 'build/client/'
+          server-dir: 'www/'
