@@ -1,5 +1,5 @@
 import { renderToString } from 'react-dom/server';
-import { dangerouslySkipEscape, escapeInject } from 'vite-plugin-ssr';
+import { dangerouslySkipEscape, escapeInject } from 'vite-plugin-ssr/server';
 
 import { Base } from '@components';
 

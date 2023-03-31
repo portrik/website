@@ -1,13 +1,47 @@
 extends:
   - stylelint-config-standard
-  - stylelint-config-clean-order
+  - stylelint-config-css-modules
+  - stylelint-config-rational-order-fix
 
 plugins:
-  - stylelint-8-point-grid
-  - stylelint-css-modules
+  - stylelint-order
+  - stylelint-config-rational-order-fix/plugin
+  - stylelint-no-unsupported-browser-features
   - stylelint-high-performance-animation
 
+rules:
+  selector-type-case:
+    - lower
+    - ignoreTypes:
+        - /^\\$\\w+/
+
+  # Ordering rules
+  plugin/rational-order:
+    - true
+    - border-in-box-model: false
+      empty-line-between-groups: true
+      severity: warning
+
+  # Unsupported features rules
+  plugin/no-unsupported-browser-features:
+    - true
+    - browsers:
+        - '> 5%'
+        - Last 2 versions
+        - not dead
+        - not op_mini all
+      ignore:
+        - rem
+        - css3-cursors
+      ignorePartialSupport: true
+      severity: warning
+
+  # Low performance animations rules
+  plugin/no-low-performance-animation-properties:
+    - true
+    - severity: warning
+
 ignoreFiles:
-  - "**/*.ts"
-  - "**/*.tsx"
-  - "**/*.jpg"
+  - '**/*.ts'
+  - '**/*.tsx'
+  - '**/*.jpg'
