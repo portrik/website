@@ -24,8 +24,8 @@ jobs:
         id: pnpm-install
         with:
           version: latest
-          run_install: true
-          recursive: false
+          run_install: |
+            - recursive: false
 
       - name: Build
         run: |
