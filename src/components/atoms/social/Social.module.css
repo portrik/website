@@ -1,14 +1,12 @@
 .social {
-	/* Add nicely aligned display. */
-	display: flex;
+	display: flex; /* Add nicely aligned display. */
 	flex-direction: row;
 	gap: 1vw;
 	align-items: center;
 	justify-content: start;
 
-	font-size: 1rem;
 	color: inherit;
+	font-size: 1rem;
 
-	/* Remove the default link styling. */
-	text-decoration: none;
+	text-decoration: none; /* Remove the default link styling. */
 }

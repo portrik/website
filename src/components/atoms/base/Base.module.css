@@ -5,9 +5,9 @@
 body {
 	margin: 0;
 
-	font-family: Jost, sans-serif;
-	font-size: var(--base-font-size);
 	color: var(--foreground);
+	font-size: var(--base-font-size);
+	font-family: Jost, sans-serif;
 
 	background-color: var(--background);
 }
@@ -18,8 +18,8 @@ body {
 }
 
 a {
-	font-weight: 800;
 	color: var(--theme-primary);
+	font-weight: 800;
 	text-decoration: none;
 }
 
@@ -63,6 +63,7 @@ a {
 
 	* {
 		color: var(--background-print) !important;
+
 		background-color: var(--foreground-print) !important;
 	}
 

@@ -10,6 +10,8 @@ plugins:
   - stylelint-high-performance-animation
 
 rules:
+  declaration-empty-line-before: null
+
   selector-type-case:
     - lower
     - ignoreTypes:

@@ -4,11 +4,11 @@
 	width: min-content;
 	margin: 0;
 
-	font-size: 3rem;
 	font-weight: 900;
+	font-size: 3rem;
 	line-height: 3rem;
-	text-transform: uppercase;
 	white-space: pre-line;
+	text-transform: uppercase;
 
 	background: var(--theme-gradient);
 	background-clip: text;
