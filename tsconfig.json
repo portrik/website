@@ -26,14 +26,11 @@
         "resolveJsonModule": true,
         "isolatedModules": false,
         "paths": {
-            "@assets": [
-                "./src/assets"
+            "$lib": [
+                "./src/lib"
             ],
-            "@components": [
-                "./src/components"
-            ],
-            "@renderer/*": [
-                "./src/renderer/*"
+            "$lib/*": [
+                "./src/lib/*"
             ]
         },
         "types": [

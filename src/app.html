@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Personal website of Patrik Dvořáček." />
+
+    %sveltekit.head%
+
+    <style>
+        /* Base styling. */
+        body {
+            margin: 0;
+
+            color: var(--foreground);
+            font-size: var(--base-font-size);
+            font-family: Jost, sans-serif;
+
+            background-color: var(--background);
+        }
+
+        * {
+            /* Standardize the box-sizing for all elements. */
+            box-sizing: border-box;
+        }
+
+        a {
+            color: var(--theme-primary);
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        /* Printer-friendly stylings for the print mode. */
+        @media print {
+            body {
+                margin: 0;
+            }
+
+            * {
+                color: var(--background-print) !important;
+
+                background-color: var(--foreground-print) !important;
+            }
+        }
+    </style>
+</head>
+
+<body data-sveltekit-preload-data="hover">
+    <div style="display: contents;">
+        %sveltekit.body%
+    </div>
+</body>
+
+</html>
