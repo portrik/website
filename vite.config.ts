@@ -4,7 +4,7 @@ import url from 'node:url';
 
 import strip from '@rollup/plugin-strip';
 import { defineConfig, type UserConfigExport } from 'vite';
-import { ssr } from 'vite-plugin-ssr/plugin';
+import { sveltekit } from '@sveltejs/kit/vite';
 
 const directoryName = path.dirname(url.fileURLToPath(import.meta.url));
 
@@ -15,12 +15,7 @@ const configuration: UserConfigExport = {
 	},
 
 	plugins: [
-		ssr({
-			prerender: {
-				noExtraDir: true,
-			},
-			includeAssetsImportedByServer: true,
-		}),
+		sveltekit(),
 		strip(),
 	],
 
@@ -45,23 +40,7 @@ const configuration: UserConfigExport = {
 		coverage: {
 			provider: 'v8',
 			enabled: true,
-			exclude: [
-				'coverage/**',
-				'dist/**',
-				'packages/*/test{,s}/**',
-				'**/*.d.ts',
-				'cypress/**',
-				'test{,s}/**',
-				'test{,-*}.{js,cjs,mjs,ts}',
-				'**/*{.,-}test.{js,cjs,mjs,ts}',
-				'**/*{.,-}spec.{js,cjs,mjs,ts}',
-				'**/__tests__/**',
-				'**/{karma,rollup,webpack,vite,vitest,jest,ava,babel,nyc,cypress,tsup,build}.config.*',
-				'**/.{eslint,mocha,prettier}rc.{js,cjs,yml}',
-				'**/src/renderer/**',
-				'**/src/assets/**',
-				'**/index.ts',
-			],
+			include: ['src/**/*.{test,spec}.{js,ts}']
 		},
 
 		typecheck: {

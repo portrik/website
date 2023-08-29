@@ -1,4 +1,5 @@
 {
+    "extends": "./.svelte-kit/tsconfig.json",
     "compilerOptions": {
         "target": "ESNext",
         "lib": [
@@ -42,6 +43,7 @@
     "include": [
         "src",
         "test",
+        "svelte.config.js",
         "vite.config.ts"
     ]
 }
