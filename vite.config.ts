@@ -3,8 +3,7 @@ import path from 'node:path';
 import url from 'node:url';
 
 import strip from '@rollup/plugin-strip';
-import react from '@vitejs/plugin-react';
-import { defineConfig, UserConfigExport } from 'vite';
+import { defineConfig, type UserConfigExport } from 'vite';
 import { ssr } from 'vite-plugin-ssr/plugin';
 
 const directoryName = path.dirname(url.fileURLToPath(import.meta.url));
@@ -22,7 +21,6 @@ const configuration: UserConfigExport = {
 			},
 			includeAssetsImportedByServer: true,
 		}),
-		react(),
 		strip(),
 	],
 
@@ -45,7 +43,7 @@ const configuration: UserConfigExport = {
 		environment: 'happy-dom',
 
 		coverage: {
-			provider: 'c8',
+			provider: 'v8',
 			enabled: true,
 			exclude: [
 				'coverage/**',
@@ -54,9 +52,9 @@ const configuration: UserConfigExport = {
 				'**/*.d.ts',
 				'cypress/**',
 				'test{,s}/**',
-				'test{,-*}.{js,cjs,mjs,ts,tsx,jsx}',
-				'**/*{.,-}test.{js,cjs,mjs,ts,tsx,jsx}',
-				'**/*{.,-}spec.{js,cjs,mjs,ts,tsx,jsx}',
+				'test{,-*}.{js,cjs,mjs,ts}',
+				'**/*{.,-}test.{js,cjs,mjs,ts}',
+				'**/*{.,-}spec.{js,cjs,mjs,ts}',
 				'**/__tests__/**',
 				'**/{karma,rollup,webpack,vite,vitest,jest,ava,babel,nyc,cypress,tsup,build}.config.*',
 				'**/.{eslint,mocha,prettier}rc.{js,cjs,yml}',
