@@ -14,8 +14,8 @@ export const Page: FC = () => {
 
 			<p>
 				Hello there! I am a software engineer with specialization in TypeScript
-				and browser content development. Currently, I am working on internal
-				tooling at <a href="https://gendigital.com">Gen Digital</a>. If you want
+				and browser content development. Currently, I am working as a full-stack
+				developer at <a href="https://cookielab.io">Cookielab</a>. If you want
 				to see an example of my work, head on to my GitHub profile. You can even
 				checkout the source code and complete CI/CD pipeline of{' '}
 				<a href="https://github.com/tehSIRius/website">this website</a>!
@@ -25,9 +25,21 @@ export const Page: FC = () => {
 				<h2>Experience</h2>
 
 				<div>
+					<h3>Cookielab</h3>
+
+					<i>August 2023 - Present</i>
+
+					<ul>
+						<li>Full-stack development with TypeScript & Python</li>
+						<li>
+							Scouring the depths of the internet for the best Slack emotes
+						</li>
+						<li>Brewing a lot of batch coffee</li>
+					</ul>
+
 					<h3>Gen Digital / Avast</h3>
 
-					<i>September 2018 - Present</i>
+					<i>September 2018 - June 2023</i>
 
 					<ul>
 						<li>
