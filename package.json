@@ -70,6 +70,11 @@
     "pnpm": {
         "overrides": {
             "magic-string": "^0.27.0"
-        }
+        },
+        "onlyBuiltDependencies": [
+            "@parcel/watcher",
+            "esbuild",
+            "rome"
+        ]
     }
 }
