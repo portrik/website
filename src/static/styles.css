@@ -1,0 +1,117 @@
+:root {
+	--background-color: #000022;
+	--main-color: #ec4e20;
+	--secondary-color: #7d70ba;
+	--tertiary-color: #7d70ba;
+	--text-color: #efe7da;
+}
+
+@font-face {
+	font-family: "WorkSans";
+	src: url("./WorkSans.ttf");
+	font-weight: 400 800;
+	font-style: normal;
+}
+
+body {
+	min-height: 100vh;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+
+	background: linear-gradient(
+		to bottom right,
+		var(--main-color),
+		var(--tertiary-color)
+	);
+	color: var(--text-color);
+
+	font-family:
+		"WorkSans", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji";
+	font-size: 18px;
+	line-height: 1.8rem;
+}
+
+main {
+	position: relative;
+	max-width: 800px;
+	width: 100%;
+
+	border-radius: 1rem;
+	padding: 2rem 2rem;
+
+	background-color: var(--background-color);
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+	text-align: justify;
+}
+
+h1 {
+	margin-top: 0;
+
+	color: var(--main-color);
+
+	font-size: 2.5rem;
+	line-height: 3rem;
+}
+
+a {
+	color: var(--text-color);
+
+	font-weight: 800;
+}
+
+a:hover {
+	color: var(--tertiary-color);
+}
+
+#links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+#links svg {
+	min-height: 16px;
+	min-width: 16px;
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+#links a {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+@media (max-width: 760px) {
+	body {
+		padding: 0;
+		align-items: stretch;
+		min-height: 100vh;
+
+		background-color: var(--background-color);
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 2rem 2rem;
+		margin: 0;
+
+		max-width: none;
+		height: 100vh;
+
+		border-radius: 0;
+		box-shadow: none;
+		background-color: var(--background-color);
+	}
+}

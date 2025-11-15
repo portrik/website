@@ -1,0 +1,43 @@
+name: Build & Test
+
+permissions:
+ contents: read
+
+on:
+  push:
+    branches:
+      - master
+
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v5.0.0
+
+      - name: Setup BEAM
+        uses: erlef/setup-beam@v1.20.4
+        with:
+          otp-version: "28"
+          gleam-version: "1.13.0"
+          rebar3-version: "3"
+
+      - name: Download dependencies
+        run: gleam deps download
+
+      - name: Check the formatting
+        run: gleam format --check src test
+
+      - name: Build the project
+        run: gleam run -m build
+
+      - name: Save build result
+        uses: actions/upload-artifact@v5.0.0
+        with:
+         path: ./dist
+
+      - name: Test
+        run: gleam test
