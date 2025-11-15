@@ -33,7 +33,6 @@ jobs:
       matrix:
         language:
           - actions
-          - typescript
 
     steps:
       - name: Checkout repository
