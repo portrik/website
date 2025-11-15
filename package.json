@@ -17,6 +17,7 @@
     "bugs": {
         "url": "https://github.com/tehSIRius/website/issues"
     },
+    "packageManager": "pnpm@10.19.0",
     "scripts": {
         "start": "vite",
         "build": "tsc && vite build",
