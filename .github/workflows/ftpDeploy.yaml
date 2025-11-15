@@ -3,7 +3,7 @@ name: Production Deployment
 on:
   push:
     tags:
-      - '*'
+      - "*"
 
 jobs:
   deploy:
@@ -11,19 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v5.0.0
 
       - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: latest
+        uses: actions/setup-node@v6.0.0
 
-      - uses: pnpm/action-setup@v2.2.4
-        name: Install pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4.2.0
         id: pnpm-install
         with:
-          version: latest
           run_install: true
 
       - name: Build
@@ -38,10 +35,10 @@ jobs:
         run: ls build
 
       - name: Upload FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: 'build/client/'
-          server-dir: 'www/'
+          local-dir: "build/client/"
+          server-dir: "www/"
