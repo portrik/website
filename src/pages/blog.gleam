@@ -11,6 +11,27 @@ pub fn view(posts: List(Post(Nil))) -> Element(Nil) {
       timestamp.compare(right.date, left.date)
     })
 
+  let posts = case sorted {
+    [] ->
+      html.p([], [
+        element.text(
+          "Patrik seems to be lazy and has not made any posts yet...",
+        ),
+      ])
+
+    sorted ->
+      html.ul(
+        [],
+        list.map(sorted, fn(post) {
+          html.li([], [
+            html.a([attribute.href("/blog/" <> post.slug)], [
+              element.text(post.title),
+            ]),
+          ])
+        }),
+      )
+  }
+
   html.html([attribute.lang("en")], [
     html.head([], [
       html.meta([attribute.charset("UTF-8")]),
@@ -26,18 +47,11 @@ pub fn view(posts: List(Post(Nil))) -> Element(Nil) {
     ]),
 
     html.body([], [
-      html.h1([], [element.text("Patrik Dvořáček's Blog")]),
+      html.main([], [
+        html.h1([], [element.text("Patrik Dvořáček's Blog")]),
 
-      html.ul(
-        [],
-        list.map(sorted, fn(post) {
-          html.li([], [
-            html.a([attribute.href("/blog/" <> post.slug)], [
-              element.text(post.title),
-            ]),
-          ])
-        }),
-      ),
+        posts,
+      ]),
     ]),
   ])
 }

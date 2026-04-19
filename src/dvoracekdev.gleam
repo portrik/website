@@ -6,8 +6,8 @@ import configuration/robots
 import configuration/rss
 import configuration/sitemap
 import gleam/io
-import routes/blog
-import routes/index
+import pages/blog
+import pages/index
 
 const output_directory = "./dist"
 

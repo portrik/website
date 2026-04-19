@@ -1,9 +1,9 @@
 :root {
-	--background-color: #000022;
+	--background-color: #fffffa;
 	--main-color: #ec4e20;
 	--secondary-color: #7d70ba;
 	--tertiary-color: #7d70ba;
-	--text-color: #efe7da;
+	--text-color: #000022;
 }
 
 @font-face {
@@ -14,39 +14,19 @@
 }
 
 body {
-	min-height: 100vh;
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 2rem;
 
-	background: linear-gradient(
-		to bottom right,
-		var(--main-color),
-		var(--tertiary-color)
-	);
 	color: var(--text-color);
+	background-color: var(--background-color);
 
 	font-family:
 		"WorkSans", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
 		"Segoe UI Emoji";
 	font-size: 18px;
 	line-height: 1.8rem;
-}
-
-main {
-	position: relative;
-	max-width: 800px;
-	width: 100%;
-
-	border-radius: 1rem;
-	padding: 2rem 2rem;
-
-	background-color: var(--background-color);
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-	text-align: justify;
 }
 
 h1 {
@@ -68,20 +48,21 @@ a:hover {
 	color: var(--tertiary-color);
 }
 
+#index-body {
+	min-height: 80vh;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+}
+
 #links {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
 	gap: 2rem;
-	margin-top: 2rem;
-}
-
-#links svg {
-	min-height: 16px;
-	min-width: 16px;
-	height: 1.5rem;
-	width: 1.5rem;
+	margin-top: 4rem;
 }
 
 #links a {
@@ -89,29 +70,28 @@ a:hover {
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
+	cursor: pointer;
+	color: var(--main-color);
+	text-decoration: none;
 }
 
 @media (max-width: 760px) {
 	body {
 		padding: 0;
 		align-items: stretch;
-		min-height: 100vh;
-
-		background-color: var(--background-color);
 	}
 
 	main {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		padding: 2rem 2rem;
+		padding: 2rem;
 		margin: 0;
 
 		max-width: none;
-		height: 100vh;
+		min-height: 90vh;
 
 		border-radius: 0;
 		box-shadow: none;
-		background-color: var(--background-color);
 	}
 }
