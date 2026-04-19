@@ -21,7 +21,7 @@ pub fn configuration() -> config.Config(Nil) {
   |> config.feed(rss.configuration())
   |> config.sitemap(sitemap.configuration())
   |> config.robots(robots.configuration())
-  |> config.route("/index", index.view)
+  |> config.route("/", index.view)
   |> config.route("/blog", blog.view)
 }
 
