@@ -25,7 +25,7 @@ jobs:
         run: gleam deps download
 
       - name: Build the project
-        run: gleam run -m build
+        run: gleam run
 
       - name: File Sanity Check
         run: ls build
