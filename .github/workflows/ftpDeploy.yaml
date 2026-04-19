@@ -28,7 +28,7 @@ jobs:
         run: gleam run
 
       - name: File Sanity Check
-        run: ls build
+        run: ls dist
 
       - name: Upload FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
