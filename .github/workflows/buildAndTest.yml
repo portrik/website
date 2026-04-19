@@ -1,7 +1,7 @@
 name: Build & Test
 
 permissions:
- contents: read
+  contents: read
 
 on:
   push:
@@ -32,12 +32,12 @@ jobs:
         run: gleam format --check src test
 
       - name: Build the project
-        run: gleam run -m build
+        run: gleam run
 
       - name: Save build result
         uses: actions/upload-artifact@v5.0.0
         with:
-         path: ./dist
+          path: ./dist
 
       - name: Test
         run: gleam test

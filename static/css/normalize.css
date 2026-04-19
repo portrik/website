@@ -66,6 +66,7 @@ textarea {
 [type="reset"],
 [type="submit"],
 button {
+	appearance: button;
 	-webkit-appearance: button;
 }
 legend {
@@ -79,6 +80,7 @@ progress {
 	height: auto;
 }
 [type="search"] {
+	appearance: textfield;
 	-webkit-appearance: textfield;
 	outline-offset: -2px;
 }
