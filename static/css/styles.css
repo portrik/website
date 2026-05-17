@@ -75,7 +75,7 @@ a:hover {
 	text-decoration: none;
 }
 
-@media (max-width: 760px) {
+@media screen and (orientation: portrait) {
 	body {
 		padding: 0;
 		align-items: stretch;
@@ -84,7 +84,8 @@ a:hover {
 	main {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: flex-end;
+		align-items: flex-start;
 		padding: 2rem;
 		margin: 0;
 
