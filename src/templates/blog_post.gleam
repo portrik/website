@@ -30,14 +30,18 @@ pub fn template(post: Post(Nil), _all_posts: List(Post(Nil))) -> Element(Nil) {
       html.link([attribute.rel("stylesheet"), attribute.href("/css/styles.css")]),
     ]),
 
-    html.body([], [
+    html.body([attribute.class("post-body")], [
       html.header([], [
-        html.nav([], [html.a([attribute.href("/blog")], [element.text("Back")])]),
+        html.h1([], [element.text(post.title)]),
+        html.nav([], [
+          html.a([attribute.href("/blog")], [
+            element.text("Back"),
+          ]),
+        ]),
       ]),
 
       html.main([], [
         html.article([], [
-          html.h1([], [element.text(post.title)]),
           html.p([], [html.em([], [element.text(post.description)])]),
           html.div([], post.contents),
         ]),

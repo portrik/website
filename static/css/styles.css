@@ -112,6 +112,28 @@ a:hover {
 	gap: 1rem;
 }
 
+.post-body {
+	min-height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.post-body > header {
+	width: 90vw;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.post-body > footer {
+	margin-top: auto;
+}
+
 @media screen and (orientation: portrait) {
 	body {
 		padding: 0;
