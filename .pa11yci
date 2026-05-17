@@ -1,0 +1,5 @@
+{
+	"runners": ["axe", "htmlcs"],
+	"level": "warning",
+	"standard": "WCAG2AAA"
+}

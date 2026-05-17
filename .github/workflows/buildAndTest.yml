@@ -11,7 +11,7 @@ on:
   pull_request:
 
 jobs:
-  test:
+  lint:
     runs-on: ubuntu-24.04
 
     steps:
@@ -29,15 +29,65 @@ jobs:
         run: gleam deps download
 
       - name: Check the formatting
-        run: gleam format --check src test
+        run: gleam format --check src
+
+  a11y-test:
+    runs-on: ubuntu-22.04 # Workaround to get away from the following Chrome error "No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor"
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v5.0.0
+
+      - name: Setup BEAM
+        uses: erlef/setup-beam@v1.24.0
+        with:
+          otp-version: "28"
+          gleam-version: "1.15.0"
+          rebar3-version: "3"
+
+      - name: Setup Node
+        uses: actions/setup-node@v6.4.0
+        with:
+          node-version: "24"
+
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v2.1.2
+        with:
+          chrome-version: 148.0.7778.97
+
+      - name: Download dependencies
+        run: gleam build
+
+      - name: Install pa11y-ci
+        run: npm i -g pa11y-ci@4.1.1 && npx @puppeteer/browsers install chrome@148.0.7778.97
+
+      - name: Run A11Y test
+        run: ./script/a11y-test.sh
+
+  build:
+    runs-on: ubuntu-24.04
+    needs:
+      - lint
+      - a11y-test
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v5.0.0
+
+      - name: Setup BEAM
+        uses: erlef/setup-beam@v1.24.0
+        with:
+          otp-version: "28"
+          gleam-version: "1.15.0"
+          rebar3-version: "3"
+
+      - name: Download dependencies
+        run: gleam deps download
 
       - name: Build the project
-        run: gleam run
+        run: gleam build
 
       - name: Save build result
         uses: actions/upload-artifact@v5.0.0
         with:
           path: ./dist
-
-      - name: Test
-        run: gleam test
