@@ -26,7 +26,7 @@ pub fn view(_posts: List(Post(Nil))) -> Element(Nil) {
         html.span([], [
           html.p([], [
             element.text(
-              "I like problem solving to help people, not corporations or LLMs. Coding is the best outlet for that. The simpler the better.",
+              "I like problem solving to help people. Not corporations or LLMs. Coding is the best outlet for that. At least for me. The simpler the outcome the better.",
             ),
           ]),
 
