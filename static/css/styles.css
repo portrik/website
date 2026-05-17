@@ -38,6 +38,12 @@ h1 {
 	line-height: 3rem;
 }
 
+h2 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+	margin: 1rem 0;
+}
+
 a {
 	color: var(--text-color);
 
@@ -50,6 +56,7 @@ a:hover {
 
 #index-body {
 	min-height: 90vh;
+
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -62,6 +69,7 @@ a:hover {
 	justify-content: space-between;
 	align-items: center;
 	gap: 2rem;
+
 	margin-top: 4rem;
 }
 
@@ -70,9 +78,38 @@ a:hover {
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
+
 	cursor: pointer;
 	color: var(--main-color);
 	text-decoration: none;
+}
+
+#blog-body {
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+#blog-post-list {
+	height: 100%;
+	margin-top: 2rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 2rem;
+}
+
+.blog-post-list-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
 }
 
 @media screen and (orientation: portrait) {
