@@ -1,5 +1,5 @@
 import blogatto/post.{type Post}
-import configuration/markdown
+import configuration/post as post_configuration
 import lustre/attribute
 import lustre/element.{type Element}
 import lustre/element/html
@@ -38,7 +38,7 @@ pub fn view(_posts: List(Post(Nil))) -> Element(Nil) {
         ]),
 
         html.span([attribute.id("links")], [
-          html.a([attribute.href("/" <> markdown.blog_route_prefix)], [
+          html.a([attribute.href("/" <> post_configuration.blog_route_prefix)], [
             element.text("Blog"),
           ]),
           html.a([attribute.href("mailto:patrik@dvoracek.dev")], [

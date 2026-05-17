@@ -1,13 +1,13 @@
-import blogatto/config/feed
+import blogatto/config/feed/rss
 
 pub const website_url = "https://dvoracek.dev"
 
-pub fn configuration() -> feed.FeedConfig(Nil) {
-  feed.new(
+pub fn configuration() -> rss.RssFeedConfig(Nil) {
+  rss.new(
     "Patrik Dvořáček's Blog",
     website_url,
     "The personal blog of Patrik Dvořáček",
   )
-  |> feed.language("en-gb")
-  |> feed.generator("Blogatto")
+  |> rss.language("en-gb")
+  |> rss.generator("Blogatto")
 }
