@@ -23,6 +23,10 @@ pub fn template(post: Post(Nil), _all_posts: List(Post(Nil))) -> Element(Nil) {
         attribute.content(post.description),
       ]),
 
+      html.link([
+        attribute.rel("stylesheet"),
+        attribute.href("/css/normalize.css"),
+      ]),
       html.link([attribute.rel("stylesheet"), attribute.href("/css/styles.css")]),
     ]),
 

@@ -43,6 +43,10 @@ pub fn view(posts: List(Post(Nil))) -> Element(Nil) {
 
       html.title([], "Patrik Dvořáček's Blog"),
 
+      html.link([
+        attribute.rel("stylesheet"),
+        attribute.href("/css/normalize.css"),
+      ]),
       html.link([attribute.rel("stylesheet"), attribute.href("/css/styles.css")]),
     ]),
 
