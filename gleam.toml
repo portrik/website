@@ -1,5 +1,5 @@
 name = "dvoracekdev"
-version = "2.1.0"
+version = "2.1.1"
 description = "The source code of my personal website powered by Gleam."
 links = [{ title = "Deployment", href = "https://dvoracek.dev" }]
 

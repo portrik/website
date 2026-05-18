@@ -14,6 +14,8 @@
 }
 
 body {
+	width: 100vw;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -54,6 +56,10 @@ a:hover {
 	color: var(--tertiary-color);
 }
 
+main {
+	width: 100%;
+}
+
 #index-body {
 	min-height: 90vh;
 
@@ -64,11 +70,14 @@ a:hover {
 }
 
 #links {
+	width: 100%;
+
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	gap: 2rem;
+	flex-wrap: wrap;
 
 	margin-top: 4rem;
 }
@@ -148,7 +157,6 @@ a:hover {
 		padding: 2rem;
 		margin: 0;
 
-		max-width: none;
 		min-height: 90vh;
 
 		border-radius: 0;
